@@ -21,8 +21,6 @@ This is a project created with the main objective of encouraging the sharing of 
   npm run dev
 ``` 
 
----
----
-
 
 Changing, just to test
+
