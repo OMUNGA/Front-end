@@ -1,6 +1,6 @@
 import {ExperimenteSection, Flex1, Flex2, ImageBox, BoxesDiv, Image, Image2} from "./styles"
-import { Container } from "../../styles/Container"
-import Button from "../Button"
+import { Container } from "../../../styles/Container"
+import Button from "../../Button"
 import {FaAngleRight} from "react-icons/fa"
 
 export const Experimente: React.FC =()=> {

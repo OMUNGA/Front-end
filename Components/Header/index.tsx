@@ -1,8 +1,9 @@
 import Menu from "../Menu"
 import {Container} from "../../styles/Container"
-import {HeroMessage, HeroSection, StyledHeader, Lampada, VerMais, SocialMedias} from "./styles"
+import {HeroMessage, HeroSection, StyledHeader, Lampada, VerMais} from "./styles"
 import Input from "../Input"
-import {FaAngleDown, FaFacebook, FaTwitter, FaWhatsapp} from "react-icons/fa"
+import {FaAngleDown} from "react-icons/fa"
+import { OmungaSocialMedias } from "../OmungaSocialMedias"
 
 export default function Header() {
     return(
@@ -22,11 +23,7 @@ export default function Header() {
                         </button>
                         <p>Ver mais</p>
                     </VerMais>
-                    <SocialMedias>
-                        <FaFacebook/>
-                        <FaTwitter/>
-                        <FaWhatsapp/>
-                    </SocialMedias>
+                    <OmungaSocialMedias/>
                 </Container>
             </HeroSection>
         </StyledHeader>
