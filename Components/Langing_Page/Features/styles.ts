@@ -1,24 +1,26 @@
 import styled from 'styled-components'
 
-export const Container = styled.main`
+export const FeaturesSection = styled.section`
     background: ${({ theme }) => theme.colors.primary};
-    height: 435px;
+    height: 400px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: ${({ theme }) => theme.colors.standard.white};
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    span {
+        font-family: Nico Moji;
+        font-size: 90px;
+        color: ${({ theme }) => theme.colors.standard.dark};
+    }
 
     div {
         h2 {
         text-align: center;
         width: 100%;
-        height: 36px;
-
         font-family: roboto;
         font-style: normal;
         font-weight: 700;
-        font-size: 30px;
+        font-size: ${({theme})=> theme.fontSize.title};
         line-height: 112%;
         color: #FFFFFF;
     }
@@ -28,7 +30,7 @@ export const Container = styled.main`
         text-align: center;
         height: 22px;
         margin: auto;
-        font-family: roboto;
+
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
@@ -40,7 +42,7 @@ export const Container = styled.main`
 
     ul {
         list-style: none;
-        margin-top: 60px;
+        margin-top: 45px;
         display: flex;
         justify-content: center;
 
@@ -48,27 +50,13 @@ export const Container = styled.main`
 
         li {
             text-align: center;
-
-            h1 {
-                font-family: roboto;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 110px;
-                color: #000000;
-                line-height: 75%;
-                
-                opacity: 0.7;
-            }
             
             p {
                 width: 247px;
-                font-family: roboto;
-                font-style: normal;
                 font-weight: 400;
-                font-size: 20px;
                 line-height: 112%;
                 color: #FFFFFF;
-                margin-top: -30px;
+                opacity: 0.7;
             }
         }
     }

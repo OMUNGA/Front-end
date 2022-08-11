@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-	width: 1100px;
+interface containerProps {
+	display: string;
+}
+export const Container= styled.div<containerProps>`
+	width: 1400px;
 	margin: 0 auto;
+	display: ${props=> props.display || "block"};
 	
 
 	@media(max-width: ${({theme}) => theme.tablet}) {

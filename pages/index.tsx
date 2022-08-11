@@ -1,18 +1,21 @@
 import type { NextPage } from 'next'
-import { Articles } from '../Components/Article'
-import { GoodOmunga } from '../Components/Good_OMUNGA'
+import { Articles } from '../Components/Articles'
+import { Features } from '../Components/Langing_Page/Features'
 import {Container} from "../styles/Container"
+import Header from '../Components/Header'
+import { SingleArticle } from '../Components/SingleArticle'
+import { Experimente } from '../Components/Langing_Page/Experimente'
 
 const Home: NextPage = () => {
   return (
-    <section>
-      <Container>
-        <h1>Hello World</h1>
-        <Articles />
-      </Container>
-      <GoodOmunga />
-    </section>
+    <>
+      <Header/>
+      <Articles />
+      <Features />
+      <Experimente />
+    </>
   )
 }
+
 
 export default Home
