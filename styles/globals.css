@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+	@font-face {
+		font-family: 'Nico Moji';
+		src: url('../public/fonts/NicoMoji/NicoMoji-Regular.woff2') format('woff2'),
+			url('../public/fonts/NicoMoji/NicoMoji-Regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 	
 	*{
 		margin: 0;
@@ -14,11 +23,11 @@
 		font-size: 17px;
 		font-family: 'Roboto', sans-serif;
 		overflow-x: hidden;
-    font-weight: 400;
+    	font-weight: 400;
 	}
 
 	section{	
-		padding: 70px 0;
+		padding: 75px 0;
 	}
 
 	img{
@@ -33,5 +42,13 @@
 	h1 {
 		line-height: 60px;
 		margin-bottom: 0.5em;
+	}
+
+	h3 {
+		font-size: 90%;
+	}
+
+	p {
+		opacity: 0.7;
 	}
 

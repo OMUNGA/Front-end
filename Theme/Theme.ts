@@ -5,16 +5,18 @@ const Theme: any = {
   colors: {
     background: "#f8f8fa",
     primary: "#8571ff",
+    gray: "#E2E2E4",
     standard: {
       white: "#fff",
-      dark: "0#00"
+      dark: "#000"
     }
   },
   fontSize: {
     extraBig: "310%",
+    title: "145%",
     normal: "100%",
     small: "90%",
-    extraSmall: "70%",
+    extraSmall: "80%",
     xxsmal: ""
   }
 }

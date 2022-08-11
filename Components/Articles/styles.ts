@@ -1,50 +1,35 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-    > div {
-        margin-top:  86px;
+export const ArticleSection = styled.section`
 
         h2 {
-            text-align: center;
-            margin: auto;
-            width: 470px;
-            height: 36px;
-            left: 625px;
-            top: 984px;
-            font-family: roboto;
             font-style: normal;
-            font-weight: 700;
-            font-size: 28px;
-            line-height: 112%;
-            margin-bottom: 15px;
-
-            color: #000000;
+            font-size: ${({theme})=> theme.fontSize.title};
         }
 
         p {
             width: 589px;
-            height: 52px;
-            left: 569px;
-            top: 1041px;
-
             font-family: roboto;
             margin: auto;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 17px;
             line-height: 133%;
-            text-align: center;
-            color: rgba(0, 0, 0, 0.7);
-            opacity: 0.7;
         }
-    }
+    
 `
-export const Card = styled.section`
+
+export const SectionTitle = styled.div`
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2em;
+`
+export const Card = styled.div`
     > button {
         width: 130px;
         height: 42px;
         border: none;
-        background: #FFFFFF;
+        background: ${({theme})=> theme.colors.standard.white};
+        color: ${({theme})=> theme.colors.standard.dark};;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 25px;
         transition: 0.2s;
@@ -68,15 +53,15 @@ export const Card = styled.section`
     }
 
     ul {
-        margin-top: 50px;
+        margin-top: 60px;
         list-style: none;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        gap: 3em;
 
         li {
-            width: 260px;
+            width: 100%;
             height: 390px;
             background: #FFFFFF;
             box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.06);
@@ -106,11 +91,10 @@ export const Card = styled.section`
 
                     strong {
                         width: 125px;
-                        height: 17px;
                         font-family: roboto;
                         font-style: normal;
                         font-weight: 400;
-                        font-size: ${({ theme }) => theme.fontSize.extraSmall};
+                        font-size: ${({ theme }) => theme.fontSize.small};
                         line-height: 133%;
                         color: #000000;
                         opacity: 0.5;
@@ -123,15 +107,18 @@ export const Card = styled.section`
                         font-family: roboto;
                         font-style: normal;
                         font-weight: 400;
-                        font-size: ${({ theme }) => theme.fontSize.xxsmal};
+                        font-size: ${({ theme }) => theme.fontSize.extraSmall};
                         line-height: 133%;
                         color: #000000;
                         opacity: 0.5;
-                        margin-top: 8px;
                     }
                 }
             }
 
+            h3 {
+                margin: 1.5em 0;
+                height: 40px;
+            }
             p {
                 height: 68px;
                 font-family: 'Roboto';

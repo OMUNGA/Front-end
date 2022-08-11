@@ -1,28 +1,28 @@
-import { Container } from './styles'
+import { FeaturesSection } from './styles'
 
-export function GoodOmunga() {
+export function Features() {
     return(
-        <Container>
+        <FeaturesSection>
             <div>
                 <h2>Oque tem de bom na Omunga</h2>
-                <h3>Existem 3 épicas que você pode encontrar aqui</h3>
+                <p>Existem 3 épicas que você pode encontrar aqui</p>
             </div>
             <ul>
                 <li>
-                    <h1>01</h1>
+                    <span>01</span>
                     <p>Partilhar conhecimento e aprender com os outros</p>
                 </li>
 
                 <li>
-                    <h1>02</h1>
+                    <span>02</span>
                     <p>Desenvolvido especialmente para angolanos</p>
                 </li>
 
                 <li>
-                    <h1>03</h1>
+                    <span>03</span>
                     <p>Cultivar a cultura de partilhas de conteúdo</p>
                 </li>
             </ul>
-        </Container>
+        </FeaturesSection>
     )
 }

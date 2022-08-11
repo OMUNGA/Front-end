@@ -1,4 +1,4 @@
-export const articles = [
+export const articlesData = [
     {
         name: 'Pedro Fracno',
         avatarURL: './images/unidos.jpg',
@@ -31,6 +31,21 @@ export const articles = [
         description: '5 Passos para fazer um design tal como está na UI sem sentir o exagero',
     },
 
+    {
+        name: 'Lázaro Manuel',
+        avatarURL: './images/unidos.jpg',
+        articleImg: './images/unidos.jpg',
+        availableAt: new Date(),
+        description: 'Criando componentes e simples Hooks personalidade com javascript puro',
+    },
+
+    {
+        name: 'Lito Bumba',
+        avatarURL: './images/unidos.jpg',
+        articleImg: './images/unidos.jpg',
+        availableAt: new Date(),
+        description: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
+    },
     {
         name: 'Lázaro Manuel',
         avatarURL: './images/unidos.jpg',
