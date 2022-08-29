@@ -16,7 +16,7 @@ export const MenuBar= styled.div`
         content: "";
         position: absolute;
         background: ${({theme})=> theme.colors.primary};
-        width: 26.1%;
+        width: 26.56%;
         right: 0;
         height: 100%;
         position: absolute;
@@ -83,7 +83,8 @@ export const Avatar = styled.img`
     height: 50px;
     border-radius: 50%;
     margin-right: -25px;
-    z-index: 1;
+    z-index: 3;
     border: 5px solid ${({theme})=> theme.colors.standard.white};
     box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
 `

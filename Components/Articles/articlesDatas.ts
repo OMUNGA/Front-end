@@ -4,7 +4,7 @@ export const articlesData = [
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: 'Plano de carreira e vagas em big Techs',
+        title: 'Plano de carreira e vagas em big Techs',
     },
 
     {
@@ -12,7 +12,7 @@ export const articlesData = [
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: '5 Passos para fazer um design tal como está na UI sem sentir o exagero',
+        title: '5 Passos para fazer um design tal como está na UI sem sentir o exagero',
     },
 
     {
@@ -20,7 +20,7 @@ export const articlesData = [
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
+        title: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
     },
 
     {
@@ -28,7 +28,7 @@ export const articlesData = [
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: '5 Passos para fazer um design tal como está na UI sem sentir o exagero',
+        title: '5 Passos para fazer um design tal como está na UI sem sentir o exagero',
     },
 
     {
@@ -36,7 +36,7 @@ export const articlesData = [
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: 'Criando componentes e simples Hooks personalidade com javascript puro',
+        title: 'Criando componentes e simples Hooks personalizados com javascript puro',
     },
 
     {
@@ -44,14 +44,14 @@ export const articlesData = [
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
+        title: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
     },
     {
         name: 'Lázaro Manuel',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: 'Criando componentes e simples Hooks personalidade com javascript puro',
+        title: 'Criando componentes e simples Hooks personalizados com javascript puro',
     },
 
     {
@@ -59,6 +59,6 @@ export const articlesData = [
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
-        description: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
+        title: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
     }
 ]

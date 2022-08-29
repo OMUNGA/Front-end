@@ -26,6 +26,10 @@
     	font-weight: 400;
 	}
 
+	#__next{
+		height: 100%;
+	}
+
 	section{	
 		padding: 75px 0;
 	}
@@ -42,6 +46,7 @@
 	h1 {
 		line-height: 60px;
 		margin-bottom: 0.5em;
+		font-weight: 700;
 	}
 
 	h3 {
@@ -50,5 +55,6 @@
 
 	p {
 		opacity: 0.7;
+		line-height: 25px;
 	}
 

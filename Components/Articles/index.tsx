@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { articlesData } from './articlesDatas'
-import { BiLike } from 'react-icons/bi'
-import { FaRegCommentDots, FaAngleRight, FaAngleDown } from 'react-icons/fa'
-import ptBR from 'date-fns/locale/pt-BR'
-import { format } from 'date-fns'
-import { ArticleSection, Card, SectionTitle} from './styles'
+import {FaAngleRight, FaAngleDown } from 'react-icons/fa'
+import { ArticleSection, CardWrapper, SectionTitle, CardFlexLayout, SeeMoreSection} from './styles'
 import {Container} from "../../styles/Container"
 import Button from "../Button"
+import {Article} from "../Article"
 
 interface ArticleDataProps {
     name: string,
     avatarURL: string,
     articleImg: string,
     availableAt: Date,
-    description: string,
+    title: string,
 }
 
 export const Articles: React.FC =()=> {
@@ -30,40 +28,22 @@ export const Articles: React.FC =()=> {
                     <h2>Artigos</h2>
                     <p>Se você gosta de ler blogs e artigos inovadores, você está no lugar certo. Aqui acreditamos no poder da partilha de conteúdos</p>
                 </SectionTitle>
-                <Card>
+                <CardWrapper>
                     <Button Text="Filtrar por" Icon={<FaAngleDown/>}/>
-                    <ul>
+                    <CardFlexLayout>
                         {articleData.map(article => (
-                            <li key={article.name}>
-                                <div>
-                                    <img src={article.avatarURL} alt='avatar' />
-                                    <small>
-                                        <strong>{article.name}</strong>
-                                        <span>{format(article.availableAt, "d '  ' MMMM '  ' yyyy", {
-                                            locale: ptBR
-                                        })}</span>
-                                    </small>
-                                </div>
-
-                                <h3>{article.description}</h3>
-                                <img src={article.articleImg} alt='Article-img' />
-                                <small>
-                                    <button>
-                                        <BiLike />
-                                    </button>
-                                    <button>
-                                        <FaRegCommentDots />
-                                    </button>
-                                </small>
-                            </li>
+                            <>
+                                <Article 
+                                    key={article.name}
+                                    article={article}
+                                />
+                            </>
                         ))}
-                    </ul>
-
-                    <button className='ver-todos'>
-                        <span>Ver todos</span>
-                        <FaAngleRight size={20} />
-                    </button>
-                </Card>
+                    </CardFlexLayout>
+                </CardWrapper>
+                <SeeMoreSection>
+                    <Button Text="Ver todos" Icon={<FaAngleRight/>}/>
+                </SeeMoreSection>
             </Container>
         </ArticleSection>
     )

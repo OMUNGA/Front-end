@@ -54,7 +54,6 @@ export const FeaturesSection = styled.section`
             p {
                 width: 247px;
                 font-weight: 400;
-                line-height: 112%;
                 color: #FFFFFF;
                 opacity: 0.7;
             }
