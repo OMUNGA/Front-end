@@ -13,13 +13,13 @@ export const Flex2 = styled.div`
     flex: 50%;
 
     h2{
-        width: 500px;
+        width: 520px;
     }
 `
 
 export const ImageBox = styled.div`
     width: 92%;
-    height: 395px;
+    height: 406px;
     box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
     display: grid;
     padding: 2em  3em;

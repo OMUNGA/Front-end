@@ -2,13 +2,12 @@ import { Container } from "../../styles/Container"
 import {MenuBar, Image, Nav, Flex1, Flex2, Flex3, Avatar, Logo} from "./styles"
 import {FaAngleRight} from "react-icons/fa"
 import Button from "../Button"
-import Link from "next/Link"
 
 import { useAuth } from "../../context/AppContext"
 
 export default function Menu () {
 
-    const {user} = useAuth()
+    const {user, logout} = useAuth()
     return(
         <>
             <MenuBar>
@@ -18,10 +17,15 @@ export default function Menu () {
                             <Logo>Omunga</Logo>
                         </Flex1>
                         <Flex2>
-                            <Link href="#">Home</Link>
-                            <Link href="#">Blogs</Link>
-                            <Link href="#">Sobre</Link>
-                            <Avatar src={user.image}/>
+                            <a href="#">Home</a>
+                            <a href="#">Artigos</a>
+                            <a href="#">Forum</a>
+                            <a href="#">Sobre</a>
+                            {
+                                user ?
+                                    <Avatar src={user?.image} onClick={()=> logout()}/>
+                                : null
+                            }
                         </Flex2>
                         <Flex3>
                             <Button Text="Entrar" Icon={<FaAngleRight/>}/>

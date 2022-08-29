@@ -29,7 +29,7 @@ export const HeroSection = styled.div`
         content: "";
         position: absolute;
         background: ${({theme})=> theme.colors.primary};
-        width: 25.5%;
+        width: 26%;
         right: 0;
         height: 100%;
         position: absolute;

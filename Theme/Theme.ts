@@ -12,7 +12,7 @@ const Theme: any = {
     }
   },
   fontSize: {
-    extraBig: "310%",
+    extraBig: "350%",
     title: "145%",
     normal: "100%",
     small: "90%",

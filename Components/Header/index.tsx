@@ -12,7 +12,7 @@ export default function Header() {
             <HeroSection>
                 <Container display="">
                     <HeroMessage>
-                        <h1>O <span>saber</span> não<br/> oucupa o lugar</h1>
+                        <h1>O <span>saber</span> não<br/> ocupa o lugar</h1>
                         <p>O melhor lugar para buscar e publicar seus artigos e blogs relacionados a TI. Aqui acreditamos o poder da partilha de conteúdos</p>
                         <Input placeholder="pesquise por um tópico" ButtonText="Pesquisar"/>
                     </HeroMessage>
