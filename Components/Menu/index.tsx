@@ -28,7 +28,9 @@ export default function Menu () {
                             }
                         </Flex2>
                         <Flex3>
+                            <a href='./login'>
                             <Button Text="Entrar" Icon={<FaAngleRight/>}/>
+                            </a>
                         </Flex3>
                     </Nav>
                 </Container>
