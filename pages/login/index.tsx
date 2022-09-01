@@ -1,23 +1,34 @@
 import type { NextPage } from 'next'
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
 import { useRouter } from "next/router";
 import { useAuth } from '../../context/AppContext'
 import Menu from '../../Components/Menu'
 import { Footer } from '../../Components/Footer/index'
 import { FaAngleRight, FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa'
-import Button from '../../Components/Button/index'
 import { StyledLogin, Form, DivInput } from "./styles"
+// import { useForm } from 'react-hook-form'
 
 
 
 const Login: NextPage = () => {
   const router = useRouter();
-  const { email, password } = router.query;
+  // const { email, password } = router.query;
   const { login, loginErrorMessage } = useAuth()
-
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [seePassword, setSeePassword] = useState(false)
+  
+  // const { register,  handleSubmit } = useForm()
 
-  login(email, password)
+  function handleInputSubmit(event: FormEvent) {
+    event.preventDefault()
+
+    console.log({email, password})
+
+    setEmail('')
+    setPassword('')
+  }
+
 
   return (
     <>
@@ -25,20 +36,31 @@ const Login: NextPage = () => {
       <StyledLogin>
         <h2>Entrar</h2>
         <p>Faça login na sua conta Omunga e desfrute já</p>
-        <Form>
+        <Form onSubmit={handleInputSubmit}>
           <div>
             <DivInput>
               <div>
                 <span>
                   <FaUser />
                 </span>
-                <input placeholder='Insira o seu email' type='email' />
+                <input
+                  required
+                  type='email'
+                  placeholder='Insira o seu email'
+                  onChange={(event) => setEmail(event.target.value)}
+                  // ref = { register ({ pattern: /^[A-Za-z]+$/i }) }
+                />
               </div>
               <div>
                 <span>
                   <FaLock />
                 </span>
-                <input placeholder='Insira a sua senha' type={seePassword ? 'text' : 'password'} />
+                <input
+                  required
+                  placeholder='Insira a sua senha'
+                  type={seePassword ? 'text' : 'password'}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
                 <button
                   onClick={() => setSeePassword(!seePassword)}
                   type='button'
@@ -48,7 +70,7 @@ const Login: NextPage = () => {
               </div>
             </DivInput>
             <a href='#'>Esqueceu sua senha?</a>
-            <Button Text='Entrar' Icon={<FaAngleRight />} />
+            <button type='submit'>Entrar <FaAngleRight /></button>
           </div>
           <small>Ou</small>
           <header>
