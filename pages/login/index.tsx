@@ -1,34 +1,16 @@
 import type { NextPage } from 'next'
-import { useState, FormEvent } from 'react'
-import { useRouter } from "next/router";
+import { useState } from 'react'
 import { useAuth } from '../../context/AppContext'
 import Menu from '../../Components/Menu'
 import { Footer } from '../../Components/Footer/index'
 import { FaAngleRight, FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa'
 import { StyledLogin, Form, DivInput } from "./styles"
-import { useForm } from 'react-hook-form'
-
-
 
 const Login: NextPage = () => {
-  const router = useRouter();
-  // const { email, password } = router.query;
   const { login, loginErrorMessage } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [seePassword, setSeePassword] = useState(false)
-
-  // const { register, handleSubmit } = useForm()
-
-  function handleInputSubmit(event: FormEvent) {
-    event.preventDefault()
-
-    console.log({ email, password })
-
-    setEmail('')
-    setPassword('')
-  }
-
 
   return (
     <>
@@ -36,14 +18,16 @@ const Login: NextPage = () => {
       <StyledLogin>
         <h2>Entrar</h2>
         <p>Faça login na sua conta Omunga e desfrute já</p>
-        <Form onSubmit={handleInputSubmit}>
+        <Form>
           <div>
             <DivInput>
+              <p>{loginErrorMessage}</p>
               <div>
                 <span>
                   <FaUser />
                 </span>
                 <input
+                  name='email'
                   type='email'
                   placeholder='Insira o seu email'
                   onChange={(event) => setEmail(event.target.value)}
@@ -54,6 +38,7 @@ const Login: NextPage = () => {
                   <FaLock />
                 </span>
                 <input
+                  name='password'
                   placeholder='Insira a sua senha'
                   type={seePassword ? 'text' : 'password'}
                   onChange={(event) => setPassword(event.target.value)}
@@ -67,7 +52,7 @@ const Login: NextPage = () => {
               </div>
             </DivInput>
             <a href='#'>Esqueceu sua senha?</a>
-            <button type='submit'>Entrar <FaAngleRight /></button>
+            <button onClick={login(email, password)}>Entrar <FaAngleRight /></button>
           </div>
           <small>Ou</small>
           <header>
@@ -84,7 +69,6 @@ const Login: NextPage = () => {
             </div>
             <p>Não tem uma conta? <a href='#'>Registrar-se</a></p>
           </header>
-          {/* <p>{loginErrorMessage}</p> */}
         </Form>
       </StyledLogin>
       <Footer />

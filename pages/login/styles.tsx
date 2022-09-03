@@ -108,6 +108,10 @@ export const Form = styled.form`
 `
 
 export const DivInput = styled.div`
+    > p {
+        color: #fc2c2c;
+    }
+
     div {
         border-radius: 25px;
 

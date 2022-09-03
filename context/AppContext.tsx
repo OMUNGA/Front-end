@@ -1,4 +1,4 @@
-import React, {createContext, useEffect, useState} from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Router, useRouter } from "next/router";
 export const AppContext = createContext({} as AppContextData)
 
@@ -18,7 +18,7 @@ interface IbodyUser {
 
 
 
-const users =  [
+const users = [
 	{
 		first_name: "Jonh",
 		last_name: "Dave",
@@ -40,48 +40,48 @@ const users =  [
 ]
 
 
-export function AppProvider({children}: any) {
+export function AppProvider({ children }: any) {
 	const [user, setUser] = React.useState<IbodyUser>()
 	const [loginErrorMessage, setLoginErrorMessage] = React.useState("")
 	const router = useRouter();
 
-	useEffect(()=> {
+	useEffect(() => {
 		const userToken = JSON.parse(localStorage.getItem("Omunga-TOKEN"))
-		if(userToken) {
+		if (userToken) {
 			const findUser = users.filter(user => user.email === userToken.email)
 			setUser(findUser[0])
-			router.push("/")
 		}
-	},[user])
+	}, [user])
 
-	const login =(email: string, password: string) => {
+	const login = (email: string, password: string) => {
 
 		if (email === "" || password === "") {
-			return setLoginErrorMessage("escreva todos os campos")
+			return setLoginErrorMessage("preenche todos os campos")
 		}
 
 		const findUser = users.filter(user => user.email === email)
 
-		if(findUser?.length) {
-			if(findUser[0].email === email && findUser[0].password === password) {
+		if (findUser?.length) {
+			if (findUser[0].email === email && findUser[0].password === password) {
 				const userToken: string = Math.random().toString(2).substring(2)
-				localStorage.setItem("Omunga-TOKEN", JSON.stringify({email, userToken}))
+				localStorage.setItem("Omunga-TOKEN", JSON.stringify({ email, userToken }))
 				setUser(findUser[0])
 				setLoginErrorMessage("")
-			}else {
+				router.push("/")
+			} else {
 				setLoginErrorMessage("email ou senha errada")
 			}
-		}else {
+		} else {
 			setLoginErrorMessage("Usuário não encontrado")
 		}
 	}
 
-	const logout =()=> {
+	const logout = () => {
 		setUser(null)
 		localStorage.removeItem("Omunga-TOKEN")
 	}
 
-    const provided = {
+	const provided = {
 		user,
 		login,
 		logout,
@@ -97,7 +97,7 @@ export function AppProvider({children}: any) {
 }
 
 type AppContextData = {
-    user: any
+	user: any
 	login: any
 	logout: any
 	loginErrorMessage: string
