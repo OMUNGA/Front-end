@@ -1,4 +1,4 @@
-import React, {createContext, useEffect, useState} from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Router, useRouter } from "next/router";
 
 export const AppContext = createContext({} as AppContextData)
@@ -17,7 +17,7 @@ interface IbodyUser {
 	password: string
 }
 
-const users: {} | any =  [
+const users: {} | any = [
 	{
 		first_name: "Jonh",
 		last_name: "Dave",
@@ -39,20 +39,20 @@ const users: {} | any =  [
 ]
 
 
-export function AppProvider({children}: any) {
-	const [user, setUser] = React.useState<IbodyUser|any>(null)
+export function AppProvider({ children }: any) {
+	const [user, setUser] = React.useState<IbodyUser | any>(null)
 	const [loginErrorMessage, setLoginErrorMessage] = React.useState("")
 	const router = useRouter();
 
-	useEffect(()=> {
+	useEffect(() => {
 		const userToken: any = JSON.parse(localStorage.getItem("Omunga-TOKEN"))
-		if(userToken) {
+		if (userToken) {
 			const findUser = users.filter((user: any) => user.email === userToken.email)
 			setUser(findUser[0])
 		}
-	},[user])
+	}, [user])
 
-	const login =(email: string, password: string) => {
+	const login = (email: string, password: string) => {
 
 		if (email === "" || password === "") {
 			return setLoginErrorMessage("escreva todos os campos")
@@ -60,27 +60,27 @@ export function AppProvider({children}: any) {
 
 		const findUser = users.filter((user: any) => user.email === email)
 
-		if(findUser?.length) {
-			if(findUser[0].email === email && findUser[0].password === password) {
+		if (findUser?.length) {
+			if (findUser[0].email === email && findUser[0].password === password) {
 				const userToken: string = Math.random().toString(2).substring(2)
-				localStorage.setItem("Omunga-TOKEN", JSON.stringify({email, userToken}))
+				localStorage.setItem("Omunga-TOKEN", JSON.stringify({ email, userToken }))
 				setUser(findUser[0])
 				setLoginErrorMessage("")
 				router.push("/")
-			}else {
+			} else {
 				setLoginErrorMessage("email ou senha errada")
 			}
-		}else {
+		} else {
 			setLoginErrorMessage("Usuário não encontrado")
 		}
 	}
 
-	const logout =()=> {
+	const logout = () => {
 		setUser(null)
 		localStorage.removeItem("Omunga-TOKEN")
 	}
 
-    const provided = {
+	const provided = {
 		user,
 		login,
 		logout,
@@ -96,7 +96,7 @@ export function AppProvider({children}: any) {
 }
 
 type AppContextData = {
-    user: any
+	user: any
 	login: any
 	logout: any
 	loginErrorMessage: string
