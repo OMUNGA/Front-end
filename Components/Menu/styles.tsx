@@ -10,6 +10,7 @@ export const MenuBar= styled.div`
     align-items: center;
     position: relative;
     position: fixed;
+    top: 0;
     z-index: 4;
 
     &:after {

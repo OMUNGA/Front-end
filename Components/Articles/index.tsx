@@ -7,6 +7,7 @@ import Button from "../Button"
 import {Article} from "../Article"
 
 interface ArticleDataProps {
+    id: number;
     name: string,
     avatarURL: string,
     articleImg: string,
@@ -18,7 +19,7 @@ export const Articles: React.FC =()=> {
     const [articleData, setArticleData] = useState<ArticleDataProps[]>([])
 
     useEffect(() => {
-        setArticleData(articlesData)
+        setArticleData(articlesData.slice(0, 8))
     }, [])
 
     return (
@@ -34,7 +35,7 @@ export const Articles: React.FC =()=> {
                         {articleData.map(article => (
                             <>
                                 <Article 
-                                    key={article.name}
+                                    key={article.id}
                                     article={article}
                                 />
                             </>
@@ -42,7 +43,9 @@ export const Articles: React.FC =()=> {
                     </CardFlexLayout>
                 </CardWrapper>
                 <SeeMoreSection>
-                    <Button Text="Ver todos" Icon={<FaAngleRight/>}/>
+                    <a href="./Articles">
+                        <Button Text="Ver todos" Icon={<FaAngleRight/>}/>
+                    </a>
                 </SeeMoreSection>
             </Container>
         </ArticleSection>

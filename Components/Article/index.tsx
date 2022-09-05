@@ -14,7 +14,7 @@ export const Article:React.FC<SingleArticleProps> = ({article})=> {
             <CardHeader>
                 <img src={article.avatarURL} alt='avatar' />
                 <small>
-                    <strong>{article.name}</strong>
+                    <strong>{article.author}</strong>
                     <span>
                         {  
                             format(article.availableAt, "d '  ' MMMM '  ' yyyy", {
