@@ -17,8 +17,8 @@ export default function Menu () {
                             <Logo>Omunga</Logo>
                         </Flex1>
                         <Flex2>
-                            <a href="#">Home</a>
-                            <a href="#">Artigos</a>
+                            <a href="./">Home</a>
+                            <a href="./Articles">Artigos</a>
                             <a href="#">Forum</a>
                             <a href="#">Sobre</a>
                             {

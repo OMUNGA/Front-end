@@ -1,7 +1,24 @@
-export const articlesData = [
+import React, {createContext, useEffect, useState} from "react";
+
+export const ArticleContext = createContext({} as ArticleContextData)
+
+export function useArticle() {
+	return React.useContext(ArticleContext);
+}
+
+interface IbodyArticle {
+	id: number
+	author: string
+	avatarURL: string
+	articleImg: string
+	availableAt: string
+	title: string
+}
+
+export const articlesData: {} | any = [
     {
         id: 0,
-        name: 'Pedro Fracno',
+        author: 'Pedro Fracno',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -9,7 +26,7 @@ export const articlesData = [
     },
     {
         id: 1,
-        name: 'Mário monteiro',
+        author: 'Mário monteiro',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -17,7 +34,7 @@ export const articlesData = [
     },
     {
         id: 2,
-        name: 'Flávio Coutinho',
+        author: 'Flávio Coutinho',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -25,7 +42,7 @@ export const articlesData = [
     },
     {
         id: 3,
-        name: 'Inácio Raimundo',
+        author: 'Inácio Raimundo',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -33,7 +50,7 @@ export const articlesData = [
     },
     {
         id: 4,
-        name: 'Lázaro Manuel',
+        author: 'Lázaro Manuel',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -41,7 +58,7 @@ export const articlesData = [
     },
     {
         id: 5,
-        name: 'Lito Bumba',
+        author: 'Lito Bumba',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -49,7 +66,7 @@ export const articlesData = [
     },
     {
         id: 6,
-        name: 'Lázaro Manuel',
+        author: 'Lázaro Manuel',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -57,7 +74,7 @@ export const articlesData = [
     },
     {
         id: 7,
-        name: 'Lito Bumba',
+        author: 'Lito Bumba',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -65,7 +82,7 @@ export const articlesData = [
     },
     {
         id: 8,
-        name: 'Lito Bumba',
+        author: 'Lito Bumba',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -73,7 +90,7 @@ export const articlesData = [
     },
     {
         id: 9,
-        name: 'Lázaro Manuel',
+        author: 'Lázaro Manuel',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -81,7 +98,7 @@ export const articlesData = [
     },
     {
         id: 10,
-        name: 'Lito Bumba',
+        author: 'Lito Bumba',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
@@ -89,10 +106,29 @@ export const articlesData = [
     },
     {
         id: 11,
-        name: 'Lito Bumba',
+        author: 'Lito Bumba',
         avatarURL: './images/unidos.jpg',
         articleImg: './images/unidos.jpg',
         availableAt: new Date(),
         title: 'Entenda o porquê VPN com internet grátis só funciona com rede Africell',
     }
 ]
+
+export function ArticleProvider({children}: any) {
+	const [articles, setArticles] = useState([])
+
+	useEffect(()=> {
+		setArticles(articlesData)
+	})
+
+	const provided = {
+		articles
+	};
+
+
+	return <ArticleContext.Provider value={provided}>{children}</ArticleContext.Provider>
+}
+
+type ArticleContextData = {
+    articles: any
+}

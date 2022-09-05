@@ -5,7 +5,6 @@ import Header from '../Components/Header'
 import { Experimente } from '../Components/Langing_Page/Experimente'
 import { Footer } from '../Components/Footer'
 import { useAuth } from '../context/AppContext'
-import SearchResult from './Search_Result'
 
 
 const Home: NextPage = () => { 

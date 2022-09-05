@@ -1,5 +1,6 @@
 import React, {createContext, useEffect, useState} from "react";
 import { Router, useRouter } from "next/router";
+
 export const AppContext = createContext({} as AppContextData)
 
 export function useAuth() {
@@ -16,9 +17,7 @@ interface IbodyUser {
 	password: string
 }
 
-
-
-const users =  [
+const users: {} | any =  [
 	{
 		first_name: "Jonh",
 		last_name: "Dave",
@@ -41,16 +40,15 @@ const users =  [
 
 
 export function AppProvider({children}: any) {
-	const [user, setUser] = React.useState<IbodyUser>()
+	const [user, setUser] = React.useState<IbodyUser|any>(null)
 	const [loginErrorMessage, setLoginErrorMessage] = React.useState("")
 	const router = useRouter();
 
 	useEffect(()=> {
-		const userToken = JSON.parse(localStorage.getItem("Omunga-TOKEN"))
+		const userToken: any = JSON.parse(localStorage.getItem("Omunga-TOKEN"))
 		if(userToken) {
-			const findUser = users.filter(user => user.email === userToken.email)
+			const findUser = users.filter((user: any) => user.email === userToken.email)
 			setUser(findUser[0])
-			router.push("/")
 		}
 	},[user])
 
@@ -60,7 +58,7 @@ export function AppProvider({children}: any) {
 			return setLoginErrorMessage("escreva todos os campos")
 		}
 
-		const findUser = users.filter(user => user.email === email)
+		const findUser = users.filter((user: any) => user.email === email)
 
 		if(findUser?.length) {
 			if(findUser[0].email === email && findUser[0].password === password) {
@@ -68,6 +66,7 @@ export function AppProvider({children}: any) {
 				localStorage.setItem("Omunga-TOKEN", JSON.stringify({email, userToken}))
 				setUser(findUser[0])
 				setLoginErrorMessage("")
+				router.push("/")
 			}else {
 				setLoginErrorMessage("email ou senha errada")
 			}
