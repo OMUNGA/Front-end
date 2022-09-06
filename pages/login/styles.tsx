@@ -59,11 +59,6 @@ export const Form = styled.form`
             grid-gap: 0.9em;
             cursor: pointer;
             border: 0;
-
-            svg {
-                font-size: 20px;
-            }
-
         }
     }
 
