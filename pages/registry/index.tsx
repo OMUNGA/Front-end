@@ -1,12 +1,16 @@
 import { Footer } from "../../Components/Footer";
 import type { NextPage } from 'next'
+import { useState } from 'react'
 import Menu from "../../Components/Menu";
-import { FaUser, FaLock, FaAngleRight } from 'react-icons/fa'
+import { FaUser, FaLock, FaAngleRight, FaEye, FaEyeSlash } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { StyledRegistry, Form, InputDiv, InputDivOne } from './styles'
+import { StyledRegistry, Form, InputDiv, InputDivOne, InputPassword } from './styles'
 import Button from "../../Components/Button";
 
 const Registry: NextPage = () => {
+    const [seePassword, setSeePassword] = useState(false)
+    const [seeConfirmPassword, setSeeConfirmPassword] = useState(false)
+
     return (
         <>
             <Menu />
@@ -39,18 +43,40 @@ const Registry: NextPage = () => {
                             </span>
                             <input type='email' placeholder='Email' />
                         </div>
-                        <div>
-                            <span>
-                                <FaLock />
-                            </span>
-                            <input type='password' placeholder='Senha' />
-                        </div>
-                        <div>
-                            <span>
-                                <FaLock />
-                            </span>
-                            <input type='password' placeholder='Confirmar-Senha' />
-                        </div>
+                        <InputPassword>
+                            <div>
+                                <span>
+                                    <FaLock />
+                                </span>
+                                <input
+                                    type={seePassword ? 'text' : 'password'}
+                                    placeholder='Senha'
+                                />
+                            </div>
+                            <button
+                                onClick={() => setSeePassword(!seePassword)}
+                                type='button'
+                            >
+                                {seePassword ? <FaEye /> : <FaEyeSlash />}
+                            </button>
+                        </InputPassword>
+                        <InputPassword>
+                            <div>
+                                <span>
+                                    <FaLock />
+                                </span>
+                                <input
+                                    type={seeConfirmPassword ? 'text' : 'password'}
+                                    placeholder='Confirmar-Senha'
+                                />
+                            </div>
+                            <button
+                                onClick={() => setSeeConfirmPassword(!seeConfirmPassword)}
+                                type='button'
+                            >
+                                {seeConfirmPassword ? <FaEye /> : <FaEyeSlash />}
+                            </button>
+                        </InputPassword>
                         <Button Text='Registrar' Icon={<FaAngleRight size={20} />} />
                     </InputDivOne>
                 </Form>

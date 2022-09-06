@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const StyledRegistry = styled.div`
     height: 100%;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,5 +123,34 @@ export const InputDivOne = styled.div`
 
     button {
         width: 100%;
+    }
+`
+
+export const InputPassword = styled.div`
+    display: flex;
+    align-items: center;
+
+    button {
+        margin-left: -34px;
+        border: none;
+        background: none;
+        transition: 0.25s;
+        padding: 5px;
+        width: 25px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        svg {
+            font-size: 16px;
+            color: #2e2e2e;
+        }
+
+        :hover {
+            background: #ddd;
+        }
     }
 `
