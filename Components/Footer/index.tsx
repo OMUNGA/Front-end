@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
             <Container display="">
                 <ParentDiv>
                     <FirstColumn>
-                        <Logo>Omunga</Logo>
+                        <Logo><span>O</span>munga</Logo>
                         <p>É um projeto criado com o principal objetivo de incentivar a partilha de conteúdos por parte dos profissionais de TI em Angola.</p>
                     </FirstColumn>
                     <SecondColumn>
