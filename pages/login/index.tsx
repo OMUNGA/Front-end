@@ -9,15 +9,15 @@ import { StyledLogin, Form, DivInput } from "./styles"
 
 const Login: NextPage = () => {
   const { login, loginErrorMessage } = useAuth()
-  const [ email, setEmail ] = useState('')
-  const [ password, setPassword ] = useState('')
-  const [ seePassword, setSeePassword ] = useState(false)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [seePassword, setSeePassword] = useState(false)
 
   login(email, password)
 
   return (
     <>
-    <Menu />
+      <Menu />
       <StyledLogin>
         <h2>Entrar</h2>
         <p>Faça login na sua conta Omunga e desfrute já</p>
@@ -55,7 +55,7 @@ const Login: NextPage = () => {
               </div>
             </DivInput>
             <a href='#'>Esqueceu sua senha?</a>
-            <button onClick={login(email, password)}>Entrar <FaAngleRight /></button>
+            <button onClick={login(email, password)}>Entrar <FaAngleRight size={20} /></button>
           </div>
           <small>Ou</small>
           <header>
@@ -70,7 +70,7 @@ const Login: NextPage = () => {
                 <img src='/register-with/github.png' />
               </a>
             </div>
-            <p>Não tem uma conta? <a href='#'>Registrar-se</a></p>
+            <p>Não tem uma conta? <a href='./registry'>Registrar-se</a></p>
           </header>
         </Form>
       </StyledLogin>
@@ -78,6 +78,5 @@ const Login: NextPage = () => {
     </>
   )
 }
-
 
 export default Login

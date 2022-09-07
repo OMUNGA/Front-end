@@ -1,10 +1,10 @@
 import { Container } from "../../styles/Container"
-import { FooterSection, FirstColumn, SecondColumn, Children1, Children2, Children3, SearchBox, ParentDiv, Gradient, Logo} from "./styles"
+import { FooterSection, FirstColumn, SecondColumn, Children1, Children2, Children3, SearchBox, ParentDiv, Gradient, Logo } from "./styles"
 // import Link from "next/Link"
 import Input from "../Input"
 
-export const Footer: React.FC =()=> {
-    return(
+export const Footer: React.FC = () => {
+    return (
         <FooterSection>
             <Container display="">
                 <ParentDiv>
@@ -34,7 +34,7 @@ export const Footer: React.FC =()=> {
                     </SecondColumn>
                 </ParentDiv>
                 <SearchBox>
-                    <Input placeholder="Pesquise por qualquer assunto" ButtonText="pesquisar"/>
+                    <Input placeholder="Pesquise por qualquer assunto" ButtonText="pesquisar" />
                 </SearchBox>
             </Container>
             <Gradient></Gradient>
