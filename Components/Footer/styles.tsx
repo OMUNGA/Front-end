@@ -3,16 +3,15 @@ import styled from "styled-components";
 export const FooterSection = styled.footer`
     padding: 75px 0;
     background-repeat: no-repeat;
-    background: ${({theme})=> theme.colors.standard.white};
+    background: ${({ theme }) => theme.colors.standard.white};
     position: relative;
     line-height: 25px;
 
-    div{
+    div {
         &:first-child {
             z-index: 2;
         }
     }
-
 
     &::before {
         content: "0";
@@ -39,7 +38,7 @@ export const FooterSection = styled.footer`
     }
 
     a {
-        color: ${({theme})=> theme.colors.standard.dark};
+        color: ${({ theme }) => theme.colors.standard.dark};
         text-decoration: none;
         opacity: 0.7;
     }
@@ -51,9 +50,61 @@ export const FooterSection = styled.footer`
     p {
         width: 430px;
     }
+
+    @media (max-width: 778px) {
+        &::before {
+            bottom: 40rem;
+            left: -0.1em;
+            font-size: 1800%;
+        }
+
+        &::after {
+            left: 1.7em;
+            bottom: 34rem;
+            font-size: 1100%;
+        }
+    }
+
+    @media (max-width: 549px) {
+        &::before {
+            bottom: 44rem;
+            left: -0.1em;
+            font-size: 1450%;
+        }
+
+        &::after {
+            left: 1.9em;
+            bottom: 38rem;
+            font-size: 800%;
+        }
+    }
+
+    @media (max-width: 306px) {
+        &::before {
+            bottom: 48rem;
+            font-size: 1300%;
+        }
+
+        &::after {
+            bottom: 41rem;
+            font-size: 700%;
+            left: 13rem;
+        }
+    }
 `
 export const ParentDiv = styled.div`
     display: flex;
+
+    @media (max-width: 968px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 778px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 9rem;
+    }
 `
 
 
@@ -71,6 +122,37 @@ export const FirstColumn = styled.div`
         z-index: 1;
         color: rgba(159, 155, 155, 0.9);
     }
+    
+    @media (max-width: 778px) {
+        &::before {
+            bottom: 40rem;
+            font-size: 1500%;
+            left: 14rem;
+        }
+    }
+
+    @media (max-width: 549px) {
+        &::before {
+            bottom: 44rem;
+            margin-left: -2rem;
+            font-size: 1100%;
+        }
+    }
+
+    @media (max-width: 549px) {
+        width: none;
+
+        p {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 306px) {
+        &::before {
+            left: 10rem;
+            font-size: 1050%;
+        }
+    }
 
     span {
         margin-bottom: 8em;
@@ -79,15 +161,19 @@ export const FirstColumn = styled.div`
     p {
         margin-top: 1em;
     }
-` 
+`
 export const Logo = styled.span`
     font-family: Nico Moji;
     opacity: 1;
     font-weight: bold;
     font-size: 240%;
 
+    span {
+        color: ${({ theme }) => theme.colors.primary};
+    }
+
     &::first-letter {
-        color: ${({theme})=> theme.colors.primary}
+        color: ${({ theme }) => theme.colors.primary}
     }
 `
 
@@ -100,10 +186,29 @@ export const SecondColumn = styled.div`
     h3 {
         margin-bottom: 1em;
     }
+
+    @media (max-width: 968px) {
+        margin-right: 0 auto;
+        flex: 0;
+    }
+
+    @media (max-width: 1080px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 968px) {
+        dusokay: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width: 778px) {
+        margin-top: 40px;
+    }
 `
 
 export const Children1 = styled.div`
-    z-index: 2;
+    z-index: 1;
 `
 export const Children2 = styled.div`
     z-index: 2;
@@ -119,6 +224,12 @@ export const SearchBox = styled.div`
 
     input {
         width: 390px;
+    }
+
+    @media (max-width: 549px) {
+        input {
+            width: 100%;
+        }
     }
 `
 
