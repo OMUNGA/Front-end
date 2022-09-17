@@ -9,7 +9,6 @@ export const Main = styled.div`
 `
 
 export const NavBar_Expanded = styled.nav`
-    // display: none;
     @media(max-width: ${({theme}) => theme.mobile}){
         height: 100vh;
         background-color: ${({theme}) => theme.colors.primary};
