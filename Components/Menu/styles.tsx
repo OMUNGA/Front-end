@@ -22,6 +22,9 @@ export const MenuBar= styled.div`
         height: 100%;
         position: absolute;
     }
+    @media(max-width: ${({theme}) => theme.mobile}) {
+        display: none;
+    }
 `
 
 export const Logo = styled.span`

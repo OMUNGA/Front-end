@@ -5,6 +5,7 @@ import Header from '../Components/Header'
 import { Experimente } from '../Components/Langing_Page/Experimente'
 import { Footer } from '../Components/Footer'
 import { useAuth } from '../context/AppContext'
+import { MenuMobile } from '../Components/MenuMobile'
 
 
 const Home: NextPage = () => { 
@@ -15,10 +16,10 @@ const Home: NextPage = () => {
       <Articles />
       {
         !user ?
-          <>
-            <Features />
-            <Experimente />
-          </>
+        <>
+        <Features />
+        <Experimente />
+        </>
         : null
       }
       <Footer/>

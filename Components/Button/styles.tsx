@@ -18,6 +18,10 @@ export const StyledButton = styled.button<buttonProps>`
     grid-gap: 0.9em;
     cursor: pointer;
     border: 0;
+    @media(max-width: ${({theme}) => theme.mobile}) {
+        margin-top: 15px;
+        width: 280px;
+    }
 `
 
 export const StyledButton2 = styled.button<buttonProps>`
