@@ -15,10 +15,10 @@ const Home: NextPage = () => {
       <Articles />
       {
         !user ?
-          <>
-            <Features />
-            <Experimente />
-          </>
+        <>
+        <Features />
+        <Experimente />
+        </>
         : null
       }
       <Footer/>
