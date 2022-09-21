@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: ${({theme}) => theme.colors.primary};
+    z-index: 3;
+    
     @media(max-width: ${({theme}) => theme.mobile}) {
         display: block;
         margin: 0;
@@ -9,9 +17,11 @@ export const Main = styled.div`
 `
 
 export const NavBar_Expanded = styled.nav`
+    height: 40vh;
+
     @media(max-width: ${({theme}) => theme.mobile}){
         height: 100vh;
-        background-color: ${({theme}) => theme.colors.primary};
+
 
         .links li{
             margin: 15px 0;
@@ -63,7 +73,7 @@ export const Links = styled.ul`
         list-style: none;
         
         position: absolute;
-        top: 250px;
+        top: 350px;
         left: 0;
         width: 100%;
         display: flex;
@@ -160,7 +170,7 @@ export const Avatar = styled.img`
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        margin-right: 40%;
+        margin-right: 0px;
         z-index: 3;
         border: 5px solid ${({theme})=> theme.colors.standard.white};
         box-shadow: 5px 5px 8px rgba(0,0,0,0.1);

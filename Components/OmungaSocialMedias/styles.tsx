@@ -13,5 +13,9 @@ export const SocialMediasBox = styled.div`
     svg {
         cursor: pointer;
     }
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+        bottom: 2em;
+	}
     
 `

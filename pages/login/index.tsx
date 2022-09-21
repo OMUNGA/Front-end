@@ -13,8 +13,6 @@ const Login: NextPage = () => {
   const [password, setPassword] = useState('')
   const [seePassword, setSeePassword] = useState(false)
 
-  login(email, password)
-
   return (
     <>
       <Menu />
