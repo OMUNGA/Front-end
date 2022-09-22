@@ -1,15 +1,14 @@
 import React from "react";
 import { Avatar, Flex, Flex2, Links, Logo, Logo1, Main, NavBar, NavBar_Expanded, SocialMedias, ToggleIcon, ToggleIcon1 } from "./styles";
-import Icon from "react-icons-kit";
+//import Icon from "react-icons-kit";
 import { useState } from "react";
-import { menu } from 'react-icons-kit/feather/menu'
-import { x } from 'react-icons-kit/feather/x'
+//import { menu } from 'react-icons-kit/feather/menu'
+//import { x } from 'react-icons-kit/feather/x'
 import {FaAngleRight, FaFacebook, FaTwitter, FaWhatsapp} from "react-icons/fa"
-import { useAuth } from "../../context/AppContext";
-import { Nav } from "../Menu/styles";
-import { Container } from "../../styles/Container";
-import Menu from "../Menu";
-import Button from "../Button";
+import { useAuth } from "../../../context/AppContext";
+import { Nav } from "../styles";
+import { Container } from "../../../styles/Container";
+import Button from "../../Button";
 
 
 export const MenuMobile = () => {
@@ -35,7 +34,8 @@ export const MenuMobile = () => {
                                 </Logo>
                             </Flex>
                             <ToggleIcon onClick={handleToggle}>
-                                {ismenuOpen?<Icon icon={x} size={30}/>:<Icon icon={menu} size={28}/>}
+                                {/*ismenuOpen?<Icon icon={x} size={30}/>:<Icon icon={menu} size={28}/>*/}
+                                {ismenuOpen? <span>x</span>:<span>open</span>}
                             </ToggleIcon>
                             <Links>
                                 <li>Home</li>
@@ -52,7 +52,8 @@ export const MenuMobile = () => {
                                 <FaWhatsapp/>
                             </SocialMedias>
                         </NavBar_Expanded>
-                        :<NavBar>
+                    :
+                        <NavBar>
                             <Container display="">
                                 <Nav>
                                     <Flex>
@@ -65,11 +66,12 @@ export const MenuMobile = () => {
                                             {
                                                 user ?
                                                     <Avatar src={user?.image} onClick={() => logout()} />
-                                                    : null
+                                                : null
                                             }
                                         </Flex2>
                                         <ToggleIcon1 onClick={handleToggle}>
-                                            {ismenuOpen?<Icon icon={x} size={28}/>:<Icon icon={menu} size={45}/>}
+                                            {/*ismenuOpen?<Icon icon={x} size={28}/>:<Icon icon={menu} size={45}/>*/}
+                                            {ismenuOpen? <span>x</span>:<span>open</span>}
                                         </ToggleIcon1>
                                     </Flex2>
                                 </Nav>
@@ -77,7 +79,6 @@ export const MenuMobile = () => {
                         </NavBar>
                 }
             </Main>
-            <Menu/>
         </>
     )
 }
