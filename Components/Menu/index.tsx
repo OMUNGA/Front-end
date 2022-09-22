@@ -26,15 +26,16 @@ export default function Menu({ openModal }: MenuProps) {
                             <a href="#">Forum</a>
                             <a href="#">Sobre</a>
                         </Flex2>
-                            {
-                                user ?
-                                    <Avatar src={user?.image} onClick={() => logout()} />
+                        {
+                            user ?
+                                <Avatar src={user?.image} onClick={() => logout()} />
                                 : null
-                            }
+                        }
                         <Flex3>
                             {
                                 user ?
-                                    <Button Text="Postar" Icon={<FaAngleRight />} onClick={openModal} />
+                                    <Button Text='Postar' Icon={<FaAngleRight />} openModal={openModal} />
+                                    
                                     : <a href="./login">
                                         <Button Text="Entrar" Icon={<FaAngleRight />} />
                                     </a>
@@ -43,7 +44,7 @@ export default function Menu({ openModal }: MenuProps) {
                     </Nav>
                 </Container>
             </MenuBar>
-            <MenuMobile/>
+            <MenuMobile />
         </>
     )
 }
