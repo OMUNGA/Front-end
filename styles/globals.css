@@ -62,11 +62,13 @@
 		text-decoration: none;
 	}
 
+	a, input, button {
+		cursor: pointer;
+	}
+
 	.react-modal-content {
 		background: white;
 		position: relative;
-		width: 749px;
-		height: 431px;
 		border-radius: 25px;
 	}
 

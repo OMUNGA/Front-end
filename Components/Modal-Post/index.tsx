@@ -18,17 +18,27 @@ export function ModalPost({ closeModal, isOpen }: ModalPostProps) {
             >
                 <Container>
                     <div>
-                    <button onClick={closeModal}>Fechar</button>
-                        <h1>Modal</h1>
+                        <button onClick={closeModal}>
+                            <img src='./images/close.svg' />
+                        </button>
+                        <h1>O que deseja postar</h1>
                     </div>
                     <Content>
-                        <div>
-                            {/* <img src='./images/articleIcon.png' /> */}
+                        <button>
+                            <img src='./images/articleIcon.png' />
                             <span>
                                 <h2>Artigo</h2>
                                 <p>Poste um artigo sobre qualquer tema para outros poderem ler, comentar e partilhar</p>
                             </span>
-                        </div>
+                        </button>
+
+                        <button>
+                            <img src='./images/forumIcon.png' />
+                            <span>
+                                <h2>Forum</h2>
+                                <p>Crie um forum sobre qualquer coisa e obtenha a resposta dos outros usuários</p>
+                            </span>
+                        </button>
                     </Content>
                 </Container>
             </Modal>
