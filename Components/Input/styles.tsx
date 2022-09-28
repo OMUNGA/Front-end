@@ -4,25 +4,23 @@ export const StyledDiv = styled.div`
     display: flex;
     margin-top: 1.5em;
 
-    @media (max-width: 549px) {
+    @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 100%;
-
-        button {
-            width: 100%;
-            margin-top: 20px;
-            margin-left: 0px;
-        }
     }
 
     button {
         margin-left: -50px;
 
-        @media(max-width: 549px) {
+        @media(max-width: 768px) {
             margin-left: 0px;
+            width: 100%;
         }
+    }
+
+    input {
+        width: 100%;
     }
 `
 
