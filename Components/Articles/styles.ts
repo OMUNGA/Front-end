@@ -30,7 +30,7 @@ export const CardWrapper = styled.div`
         box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
         
         &:hover {
-            background: #eee;
+            background: #f8f8f8;
         }
     }
 `
