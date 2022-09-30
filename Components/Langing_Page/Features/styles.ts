@@ -77,7 +77,7 @@ export const FeaturesSection = styled.section`
     }
 
     @media (max-width: 846px) {
-        height: 150vh;
+        height: 100vh;
 
         ul {
             display: flex;

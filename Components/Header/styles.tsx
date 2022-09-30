@@ -31,6 +31,11 @@ export const HeroMessage = styled.div`
             font-size: ${({ theme }) => theme.fontSize.small};
         }
     }
+
+    @media (max-width: 560px) {
+        width: 100%;
+        padding: 25.5px;
+    }
 `
 
 export const HeroSection = styled.div`
@@ -67,16 +72,15 @@ const lampadaAnimation = keyframes`
 `
 
 export const Lampada = styled.img`
-    position: absolute;
     right: 11.3em;
     top: 72px;
     width: 35%;
     z-index: 1;
     animation: ${lampadaAnimation} 2.9s ease-in-out infinite;
 
-    /* @media (max-width: 1014px) {
-        
-    } */
+    @media (max-width: 1014px) {
+        position: absolute;
+    }
 `
 
 export const VerMais = styled.div`
@@ -97,12 +101,5 @@ export const VerMais = styled.div`
         box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
         margin-right: 1em;
         font-size: 150%;
-    }
-
-    @media (max-width: 768px) {
-        display: flex;
-        justify-content: center;
-        margin-top: 5rem;
-        width: 100%;
     }
 `

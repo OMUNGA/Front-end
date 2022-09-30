@@ -17,5 +17,5 @@ export const SocialMediasBox = styled.div`
     @media(max-width: ${({theme}) => theme.mobile}) {
         bottom: 2em;
 	}
-    
+ 
 `
