@@ -38,6 +38,7 @@ export const FeaturesSection = styled.section`
 
         color: rgba(255, 255, 255, 0.7);
     }
+
     }  
 
     ul {
@@ -56,6 +57,36 @@ export const FeaturesSection = styled.section`
                 font-weight: 400;
                 color: #FFFFFF;
                 opacity: 0.7;
+            }
+        }
+    }
+
+    @media (max-width: 956px) {
+        ul {
+                
+            li {                    
+                span {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 0.90rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 846px) {
+        height: 150vh;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
     }

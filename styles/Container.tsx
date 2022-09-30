@@ -8,12 +8,16 @@ export const Container= styled.div<containerProps>`
 	margin: 0 auto;
 	display: ${props=> props.display || "block"};
 	
-
 	@media(max-width: ${({theme}) => theme.tablet}) {
 		width: 80%;
 	}
 
 	@media(max-width: ${({theme}) => theme.mobile}) {
 		width: 85%;
+	}
+
+	@media(max-width: 783px) {
+		display: flex;
+		flex-direction: column;
 	}
 `

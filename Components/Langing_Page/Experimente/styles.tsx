@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const ExperimenteSection = styled.section`
     height: 550px;
+
+    @media(max-width: 783px) {
+        height: 175vh;
+        padding: 0;
+    }
 `
 
 export const Flex1 = styled.div`
@@ -38,6 +43,11 @@ export const ImageBox = styled.div`
             color: ${({theme})=> theme.colors.standard.white};
         }
     }
+
+    @media(max-width: 783px) {
+		width: 100%;
+        position: relative;
+	}
 `
 
 export const BoxesDiv = styled.div `
