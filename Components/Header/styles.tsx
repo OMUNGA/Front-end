@@ -72,15 +72,16 @@ const lampadaAnimation = keyframes`
 `
 
 export const Lampada = styled.img`
+    position: absolute;
     right: 11.3em;
     top: 72px;
     width: 35%;
     z-index: 1;
     animation: ${lampadaAnimation} 2.9s ease-in-out infinite;
 
-    @media (max-width: 1014px) {
-        position: absolute;
-    }
+    /* @media (max-width: 1014px) {
+        
+    } */
 `
 
 export const VerMais = styled.div`
