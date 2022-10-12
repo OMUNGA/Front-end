@@ -25,7 +25,7 @@ export default function ArticlesContent(){
 				/>
 			</Head>
             <Menu/>
-            <SecundaryHeader/>
+            <SecundaryHeader Title={''} headerDescription={''}/>
             <ArticleSection>
                 <Container display="">
                     <CardFlexLayout>
