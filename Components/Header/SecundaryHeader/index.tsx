@@ -4,14 +4,19 @@ import {FaAngleDown} from "react-icons/fa"
 import { HeroSection, HeroMessage } from "../styles"
 import Input from "../../Input"
 
-export default function SecundaryHeader() {
+interface headerProps {
+    Title: string
+    headerDescription: string
+}
+
+export default function SecundaryHeader({Title, headerDescription}:headerProps) {
     return(
         <StyledHeader>
             <HeroSection>
                 <Container display="">
                     <HeroMessage>
-                        <h1 >Artigos</h1>
-                        <p>O melhor lugar para buscar e publicar seus artigos e blogs relacionados a TI. Aqui acreditamos o poder da partilha de conteúdos</p>
+                        <h1 >{Title}</h1>
+                        <p>{headerDescription}</p>
                         <Input placeholder="pesquise por um tópico" ButtonText="Pesquisar"/>
                     </HeroMessage>
                 </Container>
