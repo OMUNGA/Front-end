@@ -20,6 +20,12 @@ export const SectionTitle = styled.div`
     justify-content: center;
     text-align: center;
     margin-bottom: 2em;
+
+    @media (max-width: 612px) {
+        p {
+            width: 100%;
+        }
+    }
 `
 export const CardWrapper = styled.div`
     > button {
@@ -33,6 +39,12 @@ export const CardWrapper = styled.div`
             background: #eee;
         }
     }
+
+    @media (max-width: 328px) {
+        > button {
+            width: 100%;
+        }
+    }
 `
 
 export const CardFlexLayout = styled.ul`
@@ -41,11 +53,35 @@ export const CardFlexLayout = styled.ul`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.2em;
+
+    @media (max-width: 1425px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 895px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 585px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `
 export const SeeMoreSection = styled.div`
     padding-top: 4em;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 299px) {
+        width: 100%;
+
+        a {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+        }
+    }
 
     button {
         border: 0;
