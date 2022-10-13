@@ -62,4 +62,31 @@
 		text-decoration: none;
 	}
 
+	a, input, button {
+		cursor: pointer;
+	}
+
+	.react-modal-content {
+		background: white;
+		position: relative;
+		border-radius: 25px;
+	}
+
+	.react-modal-overlay {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 4;
+		position: absolute;
+
+		background: rgba(0, 0, 0, 0.7);
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(1px);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 
