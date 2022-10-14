@@ -5,20 +5,30 @@ import Header from '../Components/Header'
 import { Experimente } from '../Components/Langing_Page/Experimente'
 import { Footer } from '../Components/Footer'
 import { useAuth } from '../context/AppContext'
-import { ForumPublicationPage } from '../Components/ForumPublicationPage'
-import SearchResult from './Search_Result'
-import ForumsCards from '../Components/ForumsCrads'
+import SingleArticle from './SingleArticle'
 
 
 const Home: NextPage = () => { 
-const {user} = useAuth()
+  const {user} = useAuth()
   return (
-    <>
-      {/* <ForumPublicationPage /> */}
-      <SearchResult />
-      {/* <ForumsCards /> */}
+    <> {/*
+        <Header/>
+        <Articles />
+          {
+            !user ?
+            <>
+            <Features />
+            <Experimente />
+            </>
+            : null
+          }
+        <Footer/>
+    
+    */}
+    <SingleArticle/>
     </>
   )
 }
+
 
 export default Home
