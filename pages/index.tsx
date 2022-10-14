@@ -11,21 +11,18 @@ import SingleArticle from './SingleArticle'
 const Home: NextPage = () => { 
   const {user} = useAuth()
   return (
-    <> {/*
-        <Header/>
-        <Articles />
-          {
-            !user ?
-            <>
+    <> 
+      <Header/>
+      <Articles />
+        {
+          !user ?
+          <>
             <Features />
             <Experimente />
-            </>
+          </>
             : null
-          }
-        <Footer/>
-    
-    */}
-    <SingleArticle/>
+        }
+      <Footer/>
     </>
   )
 }
