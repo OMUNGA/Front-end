@@ -226,7 +226,7 @@ export const SearchBox = styled.div`
         width: 390px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 549px) {
         input {
             width: 100%;
         }

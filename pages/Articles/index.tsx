@@ -9,23 +9,24 @@ import { Container } from '../../styles/Container';
 import { Footer } from '../../Components/Footer';
 import {PaginationSection, ButtonControlsBox} from "./styles"
 import {FaAngleRight, FaAngleLeft} from "react-icons/fa"
+import { MdDriveEta } from 'react-icons/md';
 
 export default function ArticlesContent(){
     const {articles} = useArticle()
-    console.log(articles)
+
     return (
         <>  
             <Head>
-				<title>Artigos - Monocard</title>
+				<title>Artigos</title>
 				<meta name="robots" content="noindex" />
-				<meta property="og:title" content="Editar meu monocard - Monocard" />
+				<meta property="og:title" content="Ver todos os Artigos Omunga" />
 				<meta
 					property="og:description"
-					content="Edite e gerencie seu perfil do Monocard"
+					content="Veja todos os Artigos da Omunga"
 				/>
 			</Head>
             <Menu/>
-            <SecundaryHeader Title={''} headerDescription={''}/>
+            <SecundaryHeader/>
             <ArticleSection>
                 <Container display="">
                     <CardFlexLayout>

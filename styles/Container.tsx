@@ -6,9 +6,12 @@ interface containerProps {
 export const Container= styled.div<containerProps>`
 	width: 1400px;
 	margin: 0 auto;
-	
 	display: ${props=> props.display || "block"};
 	
+	@media(max-width: ${({theme}) => theme.desktop}) {
+		width: 85%;
+	}
+
 	@media(max-width: ${({theme}) => theme.tablet}) {
 		width: 80%;
 	}
@@ -17,17 +20,8 @@ export const Container= styled.div<containerProps>`
 		width: 85%;
 	}
 
-	@media(max-width: 783px) {
-		display: flex;
-		flex-direction: column;
-	}
-
-	@media (max-width: 768px) {
-        display: flex;
-        align-items: center;
-    }
-
-	@media(max-width: 783px) {
-		width: 100%;
+	@media(max-width: ${({theme}) => theme.smallerDevices}) {
+		border: 1px solid red;
+		width: 90%;
 	}
 `

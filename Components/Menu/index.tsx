@@ -5,11 +5,7 @@ import Button from "../Button"
 import { useAuth } from "../../context/AppContext"
 import { MenuMobile } from "./MenuMobile"
 
-interface MenuProps {
-    openModal: () => void
-}
-
-export default function Menu({ openModal }: MenuProps) {
+export default function Menu() {
 
     const { user, logout } = useAuth()
     return (
@@ -23,28 +19,23 @@ export default function Menu({ openModal }: MenuProps) {
                         <Flex2>
                             <a href="./">Home</a>
                             <a href="./Articles">Artigos</a>
-                            <a href="#">Forum</a>
+                            <a href="./Foruns">Forum</a>
                             <a href="#">Sobre</a>
                         </Flex2>
-                        {
-                            user ?
-                                <Avatar src={user?.image} onClick={() => logout()} />
-                                : null
-                        }
-                        <Flex3>
                             {
                                 user ?
-                                    <Button Text='Postar' Icon={<FaAngleRight />} openModal={openModal} />
-                                    
-                                    : <a href="./login">
-                                        <Button Text="Entrar" Icon={<FaAngleRight />} />
-                                    </a>
+                                    <Avatar src={user?.image} onClick={() => logout()} />
+                                : null
                             }
+                        <Flex3>
+                            <a href="./login">
+                                <Button Text="Entrar" Icon={<FaAngleRight />} />
+                            </a>
                         </Flex3>
                     </Nav>
                 </Container>
             </MenuBar>
-            <MenuMobile />
+            <MenuMobile/>
         </>
     )
 }
