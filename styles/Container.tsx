@@ -8,6 +8,9 @@ export const Container= styled.div<containerProps>`
 	margin: 0 auto;
 	display: ${props=> props.display || "block"};
 	
+	@media(max-width: ${({theme}) => theme.desktop}) {
+		width: 85%;
+	}
 
 	@media(max-width: ${({theme}) => theme.tablet}) {
 		width: 80%;
@@ -15,5 +18,10 @@ export const Container= styled.div<containerProps>`
 
 	@media(max-width: ${({theme}) => theme.mobile}) {
 		width: 85%;
+	}
+
+	@media(max-width: ${({theme}) => theme.smallerDevices}) {
+		border: 1px solid red;
+		width: 90%;
 	}
 `

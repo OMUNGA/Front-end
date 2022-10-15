@@ -19,7 +19,7 @@ export default function Menu() {
                         <Flex2>
                             <a href="./">Home</a>
                             <a href="./Articles">Artigos</a>
-                            <a href="#">Forum</a>
+                            <a href="./Foruns">Forum</a>
                             <a href="#">Sobre</a>
                         </Flex2>
                             {

@@ -1,4 +1,5 @@
 const Theme: any = {
+  desktop: "1547px",
   tablet: "1140px",
   mobile: "768px",
   smallerDevices: "477px",
@@ -17,7 +18,9 @@ const Theme: any = {
     normal: "100%",
     small: "90%",
     extraSmall: "80%",
-    xxsmal: ""
+    xxsmal: "",
+    h2Mobile: "22.95px",
+    h2SmallDevices: "19px"
   }
 }
 

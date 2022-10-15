@@ -12,14 +12,11 @@ export const ResoultSection = styled.section`
     max-width: 1400px;
     margin: 10px auto;
     padding: 10px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
    
-
     h1 {
         font-size: 26px;
         padding-top: 30px;
@@ -29,7 +26,6 @@ export const ResoultSection = styled.section`
     span {
         color: ${({theme}) => theme.colors.primary};
     }
-
     button {
         box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
         background-color: ${({theme})=> theme.colors.standard.white};

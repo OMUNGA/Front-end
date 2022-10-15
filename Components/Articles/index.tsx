@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { articlesData } from './articlesDatas'
 import { FaAngleRight, FaAngleDown } from 'react-icons/fa'
 import { ArticleSection, CardWrapper, SectionTitle, CardFlexLayout, SeeMoreSection } from './styles'
 import { Container } from "../../styles/Container"
 import Button from "../Button"
 import { Article } from "../Article"
+import { useArticle } from '../../context/ArticlesProvider';
 
 interface ArticleDataProps {
     id: number;
@@ -16,11 +16,7 @@ interface ArticleDataProps {
 }
 
 export const Articles: React.FC = () => {
-    const [articleData, setArticleData] = useState<ArticleDataProps[]>([])
-
-    useEffect(() => {
-        setArticleData(articlesData.slice(0, 8))
-    }, [])
+    const {articles} = useArticle()
 
     return (
         <ArticleSection>
@@ -32,7 +28,7 @@ export const Articles: React.FC = () => {
                 <CardWrapper>
                     <Button Text="Filtrar por" Icon={<FaAngleDown />} />
                     <CardFlexLayout>
-                        {articleData.map(article => (
+                        {articles.slice(0, 8).map(article => (
                             <>
                                 <Article
                                     key={article.id}
