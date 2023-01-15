@@ -4,7 +4,7 @@ import { FaAngleRight } from "react-icons/fa"
 import Button from "../Button"
 import { useAuth } from "../../context/AppContext"
 import { MenuMobile } from "./MenuMobile"
-
+import Link from "next/link"
 export default function Menu() {
 
     const { user, logout } = useAuth()
@@ -17,10 +17,10 @@ export default function Menu() {
                             <Logo>Omunga</Logo>
                         </Flex1>
                         <Flex2>
-                            <a href="./">Home</a>
-                            <a href="./Articles">Artigos</a>
-                            <a href="./Foruns">Forum</a>
-                            <a href="#">Sobre</a>
+                            <Link href="./">Home</Link>
+                            <Link href="./Articles">Artigos</Link>
+                            <Link href="./Foruns">Forum</Link>
+                            <Link href="#">Sobre</Link>
                         </Flex2>
                             {
                                 user ?
