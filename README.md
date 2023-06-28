@@ -24,7 +24,7 @@ This is a project created with the main objective of encouraging the sharing of 
 ### 🤝 Contribuição
 Antes de abrir uma issue ou pull request, verifique o documentos de contribuição do projeto.
 
-Por favor leia CONTRIBUTING.md para detalhes sobre o nosso código de conduta, e o processo para submeter pedidos de pull.
+Por favor leia [CONTRIBUTING.md](https://github.com/OMUNGA/Front-end/blob/develop/CONTRIBUTING.md) para detalhes sobre o nosso código de conduta, e o processo para submeter pedidos de pull.
 
 ### Comunidade
 
