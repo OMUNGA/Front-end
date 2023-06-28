@@ -21,6 +21,11 @@ This is a project created with the main objective of encouraging the sharing of 
   npm run dev
 ``` 
 
+### 🤝 Contribuição
+Antes de abrir uma issue ou pull request, verifique o documentos de contribuição do projeto.
+
+Por favor leia CONTRIBUTING.md para detalhes sobre o nosso código de conduta, e o processo para submeter pedidos de pull.
+
 ### Comunidade
 
 Faça parte da comunidade https://discord.gg/9RkXCnGD
