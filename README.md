@@ -28,7 +28,7 @@ Por favor leia [CONTRIBUTING.md](https://github.com/OMUNGA/Front-end/blob/develo
 
 ### Comunidade
 
-Faça parte da comunidade https://discord.gg/9RkXCnGD
+Faça parte da comunidade https://discord.gg/yxm9F6nc
 
 Changing, just to test
 
