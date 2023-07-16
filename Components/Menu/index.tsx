@@ -8,14 +8,17 @@ import {
   Flex3,
   Avatar,
   Logo,
+  StyledLink,
 } from './styles';
 import { FaAngleRight } from 'react-icons/fa';
 import Button from '../Button';
 import { useAuth } from '../../context/AppContext';
 import { MenuMobile } from './MenuMobile';
-import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 export default function Menu() {
   const { user, logout } = useAuth();
+  const pathName = usePathname();
 
   const menuLinks = [
     { href: '/', label: 'Home' },
@@ -34,9 +37,9 @@ export default function Menu() {
             </Flex1>
             <Flex2>
               {menuLinks.map((link) => (
-                <Link key={link.label} href={link.href}>
+                <StyledLink key={link.label} href={link.href} isActive={pathName === link.href}>
                   {link.label}
-                </Link>
+                </StyledLink>
               ))}
             </Flex2>
             {user ? (
