@@ -39,8 +39,8 @@ export const CardFlexLayout = styled.ul`
     margin-top: 60px;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.2em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
 `
 export const SeeMoreSection = styled.div`
     padding-top: 4em;
