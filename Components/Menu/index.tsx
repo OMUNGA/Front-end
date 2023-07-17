@@ -37,7 +37,7 @@ export default function Menu() {
             </Flex1>
             <Flex2>
               {menuLinks.map((link) => (
-                <StyledLink key={link.label} href={link.href} isActive={pathName === link.href}>
+                <StyledLink key={link.label} href={link.href} $isactive={pathName === link.href}>
                   {link.label}
                 </StyledLink>
               ))}

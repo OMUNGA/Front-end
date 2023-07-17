@@ -3,7 +3,7 @@ import { Keyframes } from 'styled-components';
 import Link from 'next/link';
 
 interface StyledLinkProps {
-  isActive: boolean;
+  $isactive: boolean;
 }
 
 export const MenuBar = styled.div`
@@ -72,8 +72,8 @@ export const StyledLink = styled(Link)<StyledLinkProps>`
   text-decoration: none;
   padding: 1.4em 0;
 
-  font-weight: ${(props) => props.isActive && 'bold'};
-  border-bottom: ${(props) => (props.isActive ? `3px solid #8571ff` : 'none')};
+  font-weight: ${(props) => props.$isactive && 'bold'};
+  border-bottom: ${(props) => (props.$isactive ? `3px solid #8571ff` : 'none')};
 `;
 
 export const Flex3 = styled.div`
