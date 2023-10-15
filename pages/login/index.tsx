@@ -60,7 +60,7 @@ const Login: NextPage = () => {
           <header>
             <div>
               <Link href="#">
-                <img fill src='/register-with/google.png' />
+                <img  src='/register-with/google.png' />
               </Link>
               <Link href="#">
                 <img src='/register-with/Faceboock.png' />
