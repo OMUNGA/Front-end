@@ -1,4 +1,5 @@
 import { Container } from "../../styles/Container"
+import Link from 'next/link'
 import { FooterSection, FirstColumn, SecondColumn, Children1, Children2, Children3, SearchBox, ParentDiv, Gradient, Logo } from "./styles"
 // import Link from "next/Link"
 import Input from "../Input"
@@ -16,20 +17,20 @@ export const Footer: React.FC = () => {
                         <Children1>
                             <h3>Home</h3>
                             <ul>
-                                <li><a href="#">Artigos</a></li>
-                                <li><a href="#">Forum</a></li>
+                                <li><Link href="#">Artigos</Link></li>
+                                <li><Link href="#">Forum</Link></li>
                             </ul>
                         </Children1>
                         <Children2>
                             <h3>Sobre</h3>
                             <ul>
-                                <li><a href="#">Quem somos</a></li>
-                                <li><a href="#">O projeto Omunga</a></li>
+                                <li><Link href="#">Quem somos</Link></li>
+                                <li><Link href="#">O projeto Omunga</Link></li>
                             </ul>
                         </Children2>
                         <Children3>
                             <h3>Contactos</h3>
-                            <a href="mailto: faleconosco@omunga.com" target="_top">faleconosco@omunga.com</a>
+                            <Link href="mailto: faleconosco@omunga.com" target="_top">faleconosco@omunga.com</Link>
                         </Children3>
                     </SecondColumn>
                 </ParentDiv>

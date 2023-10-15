@@ -6,6 +6,7 @@ import Menu from '../../Components/Menu'
 import { Footer } from '../../Components/Footer/index'
 import { FaAngleRight, FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa'
 import { StyledLogin, Form, DivInput } from "./styles"
+import Link from 'next/link'
 
 const Login: NextPage = () => {
   const { login, loginErrorMessage } = useAuth()
@@ -52,23 +53,23 @@ const Login: NextPage = () => {
                 </button>
               </div>
             </DivInput>
-            <a href='#'>Esqueceu sua senha?</a>
+            <Link href='#'>Esqueceu sua senha?</Link>
             <button onClick={login(email, password)}>Entrar <FaAngleRight size={20} /></button>
           </div>
           <small>Ou</small>
           <header>
             <div>
-              <a href="#">
-                <img src='/register-with/google.png' />
-              </a>
-              <a href="#">
+              <Link href="#">
+                <img fill src='/register-with/google.png' />
+              </Link>
+              <Link href="#">
                 <img src='/register-with/Faceboock.png' />
-              </a>
-              <a href="#">
+              </Link>
+              <Link href="#">
                 <img src='/register-with/github.png' />
-              </a>
+              </Link>
             </div>
-            <p>Não tem uma conta? <a href='./registry'>Registrar-se</a></p>
+            <p>Não tem uma conta? <Link href='./registry'>Registrar-se</Link></p>
           </header>
         </Form>
       </StyledLogin>

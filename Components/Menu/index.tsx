@@ -15,6 +15,8 @@ import Button from '../Button';
 import { useAuth } from '../../context/AppContext';
 import { MenuMobile } from './MenuMobile';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+
 
 export default function Menu() {
   const { user, logout } = useAuth();
@@ -46,9 +48,9 @@ export default function Menu() {
               <Avatar src={user?.image} onClick={() => logout()} />
             ) : null}
             <Flex3>
-              <a href='./login'>
+              <Link href='./login'>
                 <Button Text='Entrar' Icon={<FaAngleRight />} />
-              </a>
+              </Link>
             </Flex3>
           </Nav>
         </Container>

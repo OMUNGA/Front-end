@@ -6,6 +6,7 @@ import { FaUser, FaLock, FaAngleRight, FaEye, FaEyeSlash } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { StyledRegistry, Form, InputDiv, InputDivOne, InputPassword } from './styles'
 import Button from "../../Components/Button";
+import Link from 'next/link'
 
 interface RegistryProps {
     name: string,
@@ -143,17 +144,17 @@ const Registry: NextPage = () => {
                 <small>Ou</small>
                 <header>
                     <div>
-                        <a href="#">
+                        <Link href="#">
                             <img src='/register-with/google.png' />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link href="#">
                             <img src='/register-with/Faceboock.png' />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link href="#">
                             <img src='/register-with/github.png' />
-                        </a>
+                        </Link>
                     </div>
-                    <p>Não tem uma conta? <a href='./login'>Entrar</a></p>
+                    <p>Não tem uma conta? <Link href='./login'>Entrar</Link></p>
                 </header>
             </StyledRegistry>
             <Footer />
