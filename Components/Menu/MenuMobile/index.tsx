@@ -9,6 +9,7 @@ import { useAuth } from "../../../context/AppContext";
 import { Nav } from "../styles";
 import { Container } from "../../../styles/Container";
 import Button from "../../Button";
+import Link from 'next/link'
 
 
 export const MenuMobile = () => {
@@ -42,9 +43,9 @@ export const MenuMobile = () => {
                                 <li>Artigo</li>
                                 <li>Forum</li>
                                 <li>Sobre</li>
-                                <a href="./login">
+                                <Link href="./login">
                                     <Button Text="Entrar" Icon={<FaAngleRight />} />
-                                </a>
+                                </Link>
                             </Links>
                             <SocialMedias>
                                 <FaFacebook/>

@@ -11,6 +11,7 @@ import { Container } from '../../styles/Container';
 import Button from '../Button';
 import { Article } from '../Article';
 import { useArticle } from '../../context/ArticlesProvider';
+import Link from 'next/link'
 
 interface ArticleDataProps {
   id: number;
@@ -45,9 +46,9 @@ export const Articles: React.FC = () => {
           </CardFlexLayout>
         </CardWrapper>
         <SeeMoreSection>
-          <a href='./Articles'>
+          <Link href='./Articles'>
             <Button Text='Ver todos' Icon={<FaAngleRight />} />
-          </a>
+          </Link>
         </SeeMoreSection>
       </Container>
     </ArticleSection>
